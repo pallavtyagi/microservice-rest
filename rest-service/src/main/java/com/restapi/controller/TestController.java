@@ -19,13 +19,28 @@ public class TestController {
 
     @RequestMapping(value = "/names",produces = { "application/json" }, method = RequestMethod.GET)
     public ResponseEntity<List<String>> imagesGet() {
-        List<String> names = new ArrayList<String>();
-        names.add("Test1");
-        names.add("Test2");
-        names.add("Test3");
-        names.add("Test4");
-        names.add("Test5");
-        names.add("Test6");
+        List<String> names = new ArrayList<>();
+        String ROLE_READ="READ::";
+        names.add(ROLE_READ+"Test1");
+        names.add(ROLE_READ+"Test2");
+        names.add(ROLE_READ+"Test3");
+        names.add(ROLE_READ+"Test4");
+        names.add(ROLE_READ+"Test5");
+        names.add(ROLE_READ+"Test6");
         return new ResponseEntity<List<String>>(names, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/names",produces = { "application/json" }, method = RequestMethod.GET)
+    public ResponseEntity<List<String>> imagesGetAdmin() {
+        List<String> names = new ArrayList<>();
+        String ROLE_ADMIN="ADMIN::";
+        names.add(ROLE_ADMIN+"Test1");
+        names.add(ROLE_ADMIN+"Test2");
+        names.add(ROLE_ADMIN+"Test3");
+        names.add(ROLE_ADMIN+"Test4");
+        names.add(ROLE_ADMIN+"Test5");
+        names.add(ROLE_ADMIN+"Test6");
+        return new ResponseEntity<List<String>>(names, HttpStatus.OK);
+    }
+
 }

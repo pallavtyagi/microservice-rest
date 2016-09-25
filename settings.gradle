@@ -1,1 +1,1 @@
-include 'config-service', 'eureka-service', 'rest-service', 'gateway-service'
+include 'config-service', 'eureka-service', 'rest-service', 'gateway-service', 'auth-service'
