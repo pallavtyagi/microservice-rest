@@ -32,7 +32,7 @@ public class TestController {
         return new ResponseEntity<List<String>>(names, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/names",produces = { "application/json" }, method = RequestMethod.GET)
+    /*@RequestMapping(value = "/names",produces = { "application/json" }, method = RequestMethod.GET)
     public ResponseEntity<List<String>> imagesGetAdmin() {
         List<String> names = new ArrayList<>();
         String ROLE_ADMIN="ADMIN::";
@@ -43,6 +43,6 @@ public class TestController {
         names.add(ROLE_ADMIN+"Test5");
         names.add(ROLE_ADMIN+"Test6");
         return new ResponseEntity<List<String>>(names, HttpStatus.OK);
-    }
+    }*/
 
 }
