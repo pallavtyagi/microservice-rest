@@ -3,14 +3,10 @@ package com.restapi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-@org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client
-@EnableFeignClients
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableFeignClients
 public class RestServiceApplication {
 
 	public static void main(String[] args) {
