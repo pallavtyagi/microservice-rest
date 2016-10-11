@@ -16,5 +16,3 @@ after_success:
 branches:
   only:
   - master
-script:
-  - bundle exec rake test
